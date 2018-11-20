@@ -48,7 +48,7 @@ p4 = sqrt((1/(N*M))*(sum(sum((im - imf4).^2))));
 ## Affichage
 subplot(4,1,1);
 image(imf1/4);
-print(imf1/4);
+
 colormap(gray);
 title(['Filtre moyen 3x Performance : ',num2str(p1)])
 
