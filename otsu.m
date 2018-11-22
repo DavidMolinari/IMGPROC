@@ -1,4 +1,4 @@
-function [IDX,sep] = otsu_b(I,n)
+function [IDX,sep] = otsu(I,n)
 
 %OTSU Global image thresholding/segmentation using Otsu's method.
 %   IDX = OTSU(I,N) segments the image I into N classes by means of Otsu's
@@ -211,3 +211,4 @@ if isRGB && isfloat(A)
     if isRGB, isRGB = (min(A(:))>=0 && max(A(:))<=1); end
 end
 end
+
