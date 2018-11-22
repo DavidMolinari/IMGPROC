@@ -19,9 +19,19 @@
   
   ![](https://i.imgur.com/Ruz6lKV.png)
   
-  Avec l'affichage de l
 * 3 -
   * 3 - a. En utilisant la fonction otsu() fournie calculer l'image segmentée de texture3.tif
   * 3 - b. Segmentation supervisée. 
   * Calculer la valeur moyenne et l'écart type de l'attribut
   * Calculer l'image binaire par seuillage
+
+
+
+//WONTFIX
+
+
+![](https://i.imgur.com/zFJ3dbw.png)
+
+![](https://i.imgur.com/lamQz9N.png)
+
+![](https://i.imgur.com/gANVkTr.png)
