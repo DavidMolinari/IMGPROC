@@ -14,6 +14,8 @@
   m_2 = mean(mean(texture2));
   ```
   * 2 - b. Afficher les histogrammes des deux images attributs. On utilise pour cela la fonction hist(). Conclusion ?
+  ![](https://i.imgur.com/uxZZKXx.png)
+  
 * 3 -
   * 3 - a. En utilisant la fonction otsu() fournie calculer l'image segmentée de texture3.tif
   * 3 - b. Segmentation supervisée. 
