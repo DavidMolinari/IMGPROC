@@ -12,6 +12,9 @@ S5=[-1,  0, 2 , 0 ,-1]; %spot
 R5=[1 , -4, 6 ,-4 , 1]; %ripple (Rauhheit)
 W5=[-1, 2 , 0 , -2, 1]; %wave   (welligkeit)
 L5S5=L5'*S5;
+
+
+
 imf = conv2(texture3, L5S5, 'same');
 
 subplot(1,2,1);
@@ -24,13 +27,17 @@ colormap(gray);
 title('Image covoluée par le masque L5S5');
 
 #vL = VarianceLocale(imf, 5);
-
 imfc = imf - min(min(imf));
+mn = min(imfc);
+out = 64./(max(imf)-mn)*(imf - mn);
 figure();
 subplot(1,3,1);
-imagesc(imf);
+##imagesc(out);
+hist(imfc/599);
+
 colormap(gray);
 title('image convoluée');
+figure();
 subplot(1,3,2);
 imagesc(imfc);
 colormap(gray);
