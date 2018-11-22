@@ -1,12 +1,10 @@
 # Traitement d’image
 ## TP N° 5 : Segmentation par attributs de texture
 
-
+* 
 * 1 - Afficher l'image normalisée entre 0 et 64. Qu'observe-t-on ? Conclusion.
-
-Meh 
-
-
+   ![](https://i.imgur.com/ng0HWnv.png)
+   Les niveaux de gris sont plus homogènes
 
 * 2 - 
   * 2 - a. Calculer les valeurs moyennes des deux images attributs. Conclusion.
