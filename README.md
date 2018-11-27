@@ -163,11 +163,14 @@ Avec un seuil supervisé, le resultat est meilleur.
 
 
 
-//WONTFIX
+
+## TP 6 :
+
+*  Application du filtre avec un bruit Salt & Pepper, le résultat est surprenant 
+![](https://i.imgur.com/g9Ooumf.png)
 
 
-![](https://i.imgur.com/zFJ3dbw.png)
+* Application du filtre avec un bruit gaussien : le bruit est simplement flouté par petites cases 
+![](https://i.imgur.com/EUFXmQR.png)
 
-![](https://i.imgur.com/lamQz9N.png)
 
-![](https://i.imgur.com/gANVkTr.png)
