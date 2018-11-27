@@ -166,11 +166,11 @@ Avec un seuil supervisé, le resultat est meilleur.
 
 ## TP 6 :
 
-*  Application du filtre avec un bruit Salt & Pepper, le résultat est surprenant 
+* Méhode Median => Résultat propre, les contours sont visibles et le bruit a été retiré
 ![](https://i.imgur.com/g9Ooumf.png)
 
 
-* Application du filtre avec un bruit gaussien : le bruit est simplement flouté par petites cases 
-![](https://i.imgur.com/EUFXmQR.png)
+* Méthode linéaire => Le bruit persiste toujours, mais a été atténué par ses niveaux de gris, les contours sont plus flou
+![](https://i.imgur.com/rNHtmbH.png)
 
 
