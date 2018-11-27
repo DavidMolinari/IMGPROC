@@ -161,3 +161,10 @@ Avec un seuil supervisé, le resultat est meilleur.
   ![](https://i.imgur.com/TiDH6h9.png)
   ![](https://i.imgur.com/GqJVhEk.png)
 
+
+
+
+## TP 6 :
+
+* 
+![](https://i.imgur.com/g9Ooumf.png)
