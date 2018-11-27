@@ -98,7 +98,38 @@ endfunction
 ![](https://i.imgur.com/BSE9nlW.png)
 
 
-## TP N° 4 : Segmentation par attributs de texture
+## TP N° 4 : 
+
+* Avec la fonction otsu() fournie calculer l'image segmentée de nuageNDG.bmp. La fonction otsu()
+s'applique simplement sur une image img de la façon suivante
+
+```matlab
+imb = otsu(img);
+```
+![](https://i.imgur.com/XgmEF3i.png)
+
+
+
+- Pour dinstinguer le seuil, le choix de prendre des petits bout de nuage et de ciel est volontaire et sera montré dans la suite  :
+
+![](https://i.imgur.com/6uo6SMT.png)
+
+
+![](https://i.imgur.com/mEKbSZH.png)
+
+
+* L'intersection est ainsi visible grâce à ces deux segmentations choisies
+
+![](https://i.imgur.com/VaFsUVf.png)
+
+
+* Conclusion :
+
+![](https://i.imgur.com/Q5ynTmX.png)
+
+Avec un seuil supervisé, le resultat est meilleur.
+
+
 
 
 ## TP N° 5 : Segmentation par attributs de texture
