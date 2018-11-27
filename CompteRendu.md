@@ -14,6 +14,28 @@ p = sqrt((1/(N*M))*(sum(sum((im - imf).^2))));
 
 
 
+## TP N° 2 : 
+
+```matlab
+% avec
+A = 50;
+B = 10;
+I = sin(2*pi*(A*x/256 + B*y/256)) + 1;
+```
+![](https://i.imgur.com/m79pNiN.png)
+
+- Les pics fréquentiels de I : Localisés en (119,79) et (139,179)
+
+
+![](https://i.imgur.com/VVwFS1A.png)
+
+
+
+
+![](https://i.imgur.com/HxnVa1t.png)
+
+
+
 
 
 ## TP N° 5 : Segmentation par attributs de texture
