@@ -56,7 +56,49 @@ Après l'application de la transformée de fourier inverse on se débarasse des 
 ![](https://i.imgur.com/HxnVa1t.png)
 
 
----
+
+
+## TP N° 3 :
+
+
+* 1. Calcul du laplacien de l'image imlap par convolution avec un masque laplacien donné par :
+``` matlab
+lpmsk = [0 1 0 ; 1 -4 1 ; 0 1 0];
+```
+
+* 2. 
+```matlab
+function retval = laplaceS (img, seuil)
+  imgd = double(img); #Ref non bruitée
+  lpmsk = [0 1 0 ; 1 -4 1 ; 0 1 0];
+  imglap = conv2(imgd, lpmsk, 'same');
+  imgp = imglap > 0;
+  # IL faut deux autres images décalées pour comparer le voisins
+  # Des versions translatées d'un pixel par rapport à la première
+  imgp1 = imgp(1:255, 1:255);
+  imgph = imgp(1:255, 2:256);
+  imgpv = imgp(2:256, 1:255);
+  # Passage par 0
+  imgZ = (imgp1~=imgph) | (imgp1~=imgpv);
+  #imshow(imgZ)
+  gx = [1 1 1; 0 0 0 ; -1 -1 -1];
+  gy = gx';
+  imgn = conv2(imgd, gx , 'same').^2 + conv2(imgd, gy, 'same').^2;
+  imgn = imgn(1:255, 1:255);
+  cont = imgZ & (imgn > seuil);
+  retval =  cont;
+endfunction
+```
+
+
+
+* Différence entre Canny( à gauche )  et Laplace avec le même seuil
+
+
+![](https://i.imgur.com/BSE9nlW.png)
+
+
+## TP N° 4 : Segmentation par attributs de texture
 
 
 ## TP N° 5 : Segmentation par attributs de texture
