@@ -30,12 +30,33 @@ I = sin(2*pi*(A*x/256 + B*y/256)) + 1;
 ![](https://i.imgur.com/VVwFS1A.png)
 
 
+```matlab
 
+figure();
+imgOld = fft2(im + I);
+img(11,51) = 0;
+img(247,207) = 0;
+imgOld = fftshift(imgOld);
+img = fftshift(img);
+
+
+figure();
+subplot(1,2,1);
+imgIOld = ifft2(imgOld);
+imagesc((abs(imgIOld))/4);
+
+imgI = ifft2(img);
+subplot(1,2,2);
+image((abs(imgI))/4);
+colormap(gray);
+```
+
+Après l'application de la transformée de fourier inverse on se débarasse des perturbations appliquées
 
 ![](https://i.imgur.com/HxnVa1t.png)
 
 
-
+---
 
 
 ## TP N° 5 : Segmentation par attributs de texture
