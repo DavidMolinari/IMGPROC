@@ -24,7 +24,10 @@ reflapla = laplaceS(im, seuil);
 
 lapla05 = laplaceS(bruit,seuilPla);
 tauxLaPla05 = sum(sum(reflapla ~= lapla05));
-
+tauxLaPla05
+figure();
+subplot(1,2,1);
 
 imshow(refcanny);
+subplot(1,2,2);
 imshow(reflapla);

@@ -1,1 +1,45 @@
-clear all;close all;clear all function;[x,y] = meshgrid(1:256, 1:256);A = 50;B = 10;im = imread('./assets/photophore.tif');imf = double(im);I = sin(2*pi*(A*x/256 + B*y/256)) + 1;ii = fft2(I);ii = abs(ii);colormap(gray);img = fft2(im + I);imgOld = fft2(im + I);img(11,51) = 0;img(247,207) = 0;imgOld = fftshift(imgOld);img = fftshift(img);imgIOld = ifft2(imgOld);subplot(1,2,1);image(abs(imgIOld)/4);imgI = ifft2(img);subplot(1,2,2);image(abs(imgI)/4);colormap(gray);
+im = imread('./assets/photophore.tif');
+
+imf = double(im);
+
+figure('Name','moyen')
+colormap(gray)
+et = 5;
+imb = imf + et*randn(size(imf));
+subplot(2,2,1)
+image(imf/4)
+subplot(2,2,2)
+image(imb/4)
+
+flt1 = [1 1 1;1 1 1;1 1 1]/9;
+flt2 = [1 1 1 1 1;1 1 1 1 1;1 1 1 1 1;1 1 1 1 1;1 1 1 1 1]/25;
+
+imf1 = conv2(imb, flt1, 'same');
+imf2 = conv2(imb, flt2, 'same');
+subplot(2,2,3)
+image(imf1/4);
+subplot(2,2,4);
+image(imf2/4);
+
+[X,Y] = meshgrid(-1:1,-1:1);
+
+sigma=5;
+
+fgauss1 = exp(-(X.^2 + Y.^2)/(2*sigma*sigma));
+fgauss1 = fgauss1/sum(sum(fgauss1))
+
+[X,Y] = meshgrid(-1:3, -1:3)
+
+fgauss2 = exp(-(X.^2 + Y.^2)/(2*sigma*sigma));
+fgauss2 = fgauss2/sum(sum(fgauss2))
+
+figure('Name','gauss')
+colormap(gray)
+subplot(2,2,1)
+image(imf/4)
+subplot(2,2,2)
+image(imb/4)
+subplot(2,2,3)
+image(conv2(imb, fgauss1, 'same')/4)
+subplot(2,2,4)
+image(conv2(imb, fgauss2, 'same')/4)
