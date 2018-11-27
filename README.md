@@ -166,5 +166,11 @@ Avec un seuil supervisé, le resultat est meilleur.
 
 ## TP 6 :
 
-* 
+*  Application du filtre avec un bruit Salt & Pepper, le résultat est surprenant 
 ![](https://i.imgur.com/g9Ooumf.png)
+
+
+* Application du filtre avec un bruit gaussien : le bruit est simplement flouté par petites cases 
+![](https://i.imgur.com/EUFXmQR.png)
+
+
