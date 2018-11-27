@@ -1,4 +1,21 @@
 # Traitement d’image
+
+ 
+## TP N° 1 : La transformée de Fourier
+
+
+```matlab
+imf = conv2(imb, fgauss3, 'same');
+p = sqrt((1/(N*M))*(sum(sum((im - imf).^2))));
+```
+
+
+![](https://i.imgur.com/R53zwY7.png)
+
+
+
+
+
 ## TP N° 5 : Segmentation par attributs de texture
 
 * 
