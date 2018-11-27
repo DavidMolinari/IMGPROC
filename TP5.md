@@ -24,6 +24,9 @@
   * 3 - b. Segmentation supervisée. 
   * Calculer la valeur moyenne et l'écart type de l'attribut
   * Calculer l'image binaire par seuillage
+  
+  ![](https://i.imgur.com/TiDH6h9.png)
+  ![](https://i.imgur.com/GqJVhEk.png)
 
 
 
