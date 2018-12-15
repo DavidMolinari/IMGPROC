@@ -1,6 +1,6 @@
 # Traitement d’image
 
- 
+# David MOLINARI - STMN 2
 ## TP N° 1 : La transformée de Fourier
 
 
